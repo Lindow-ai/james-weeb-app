@@ -8,18 +8,33 @@
 }
 
 .logo-container {
-    padding-top: 40px;
+    padding-top: 4vh;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     gap: 20;
 } 
 
+.content-container {
+    display: flex;
+    flex-direction: row; /* Afficher les éléments côte à côte */
+    /* Autres styles nécessaires */
+  }
+
+.children-container {
+    flex: 1; /* Prendra l'espace restant disponible */
+    /* Autres styles nécessaires */
+    padding-top: 4vh;
+    display: inline-flex;
+    gap: 1;
+}
+
 .menu-bar-container {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
-    padding-bottom: 140px;
+    justify-content: center;
+    padding-bottom: 150px;
+    flex: 1;
     /* margin-top: 80px; */
 }

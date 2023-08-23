@@ -11,6 +11,7 @@
 .theme-app {
     background-color: var(--surface-color);
     color: var(--text-color);
+    flex-direction: row;
 }
 
 .container-app {
@@ -18,4 +19,9 @@
     padding: 0px 5px;
     align-items: flex-start;
     gap: 10px
+}
+
+body {
+    height:100%;
+    width:100%;
 }

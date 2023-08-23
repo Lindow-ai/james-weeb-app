@@ -4,8 +4,8 @@ const NewsPaper = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="80"
-      height="80"
+      width="8vw"
+      height="8vh"
       fill="none"
       viewBox="0 0 80 80"
     >

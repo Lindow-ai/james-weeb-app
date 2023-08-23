@@ -5,11 +5,12 @@ type LogoType = {
 }
 
 const Logo = ({color}: LogoType) => {
+  
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="70"
-      height="160"
+      width="7vw"
+      height="16vh"
       fill="none"
       viewBox="0 0 70 160"
     >

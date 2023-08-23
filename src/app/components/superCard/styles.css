@@ -1,0 +1,8 @@
+.super-card {
+    width: 90vw;
+    height: 90vh;
+    background-color: blueviolet;
+    border-radius: 2em;
+    border: 2px solid white;
+    position: relative;
+}
