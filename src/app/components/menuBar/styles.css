@@ -22,8 +22,8 @@
     linear-gradient(to bottom,  #FFFFFF 0.15vw, transparent 0.15vw) 100% 0,
     linear-gradient(to top,  #FFFFFF 0.15vw, transparent 0.15vw) 0 100%,
     linear-gradient(to top,  #FFFFFF 0.15vw, transparent 0.15vw) 100% 100%;
-    margin-left: 2vw;
-
+    /* margin-left: 2vw; */
+    
   background-repeat: no-repeat;
   background-size: 1vw 1.5vh;  
 }
@@ -40,4 +40,12 @@
     line-height: 1.4vh;
     /* 144.444% */
     text-transform: uppercase;
+}
+
+.visibleText:hover {
+    visibility: visible;
+}
+
+.visibleTextTest {
+    visibility: hidden;
 }

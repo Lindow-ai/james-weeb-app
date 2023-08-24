@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import NewsPaper from '@/app/assets/NewsPaper'
 import './styles.css'
 import PhotoCamera from '@/app/assets/PhotoCamera'
@@ -15,35 +15,45 @@ const MenuBar = () => {
         isEarthHover: false
     });
 
+
+    const handleMouseEnter = (key: string) => {
+        setIsHover(prevState => ({ ...prevState, [key]: true }));
+    };
+
+    const handleMouseLeave = (key: string) => {
+        setIsHover(prevState => ({ ...prevState, [key]: false }));
+    };
+
     return (
         <ul className='menu-bar'>
             <li className='menu-bar-item-typography menu-bar-item'
-                onMouseEnter={() => setIsHover({ ...isHover, isNewsPaperHover: true  })}
-                onMouseLeave={() => setIsHover({ ...isHover, isNewsPaperHover: false  })}
+                onMouseEnter={() => handleMouseEnter('isNewsPaperHover')}
+                onMouseLeave={() => handleMouseLeave('isNewsPaperHover')}
             >
                 <Icon>
-                    <NewsPaper />{isHover.isNewsPaperHover && 'press'}
+                    <NewsPaper />
+                    {isHover.isNewsPaperHover && 'news'}
                 </Icon>
             </li>
             <li className='menu-bar-item menu-bar-item-space menu-bar-item-typography'
-            onMouseEnter={() => setIsHover({ ...isHover, isPhotoCameraHover: true  })}
-            onMouseLeave={() => setIsHover({ ...isHover, isPhotoCameraHover: false  })}
+            onMouseEnter={() => handleMouseEnter('isPhotoCameraHover')}
+            onMouseLeave={() => handleMouseLeave('isPhotoCameraHover')}
             >
                 <Icon>
                     <PhotoCamera />{isHover.isPhotoCameraHover && 'photos'}
                 </Icon>
             </li>
             <li className='menu-bar-item menu-bar-item-space menu-bar-item-typography'
-            onMouseEnter={() => setIsHover({ ...isHover, isTelescopeHover: true  })}
-            onMouseLeave={() => setIsHover({ ...isHover, isTelescopeHover: false  })}
+            onMouseEnter={() => handleMouseEnter('isTelescopeHover')}
+            onMouseLeave={() => handleMouseLeave('isTelescopeHover')}
             >
                 <Icon>
                     <Telescope />{isHover.isTelescopeHover && 'about'}
                 </Icon>
             </li>
             <li className='menu-bar-item menu-bar-item-space menu-bar-item-typography'
-             onMouseEnter={() => setIsHover({ ...isHover, isEarthHover: true  })}
-             onMouseLeave={() => setIsHover({ ...isHover, isEarthHover: false  })}
+             onMouseEnter={() => handleMouseEnter('isEarthHover')}
+             onMouseLeave={() => handleMouseLeave('isEarthHover')}
             >
                 <Icon>
                     <Earth />{isHover.isEarthHover && 'contact'}

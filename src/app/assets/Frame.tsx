@@ -4,10 +4,9 @@ const Frame = () => {
   return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="92vw"
         height="92vh"
         fill="none"
-        viewBox="0 0 1240 720"
+        viewBox="0 0 1280 720"
       >
         <path
           stroke="#fff"

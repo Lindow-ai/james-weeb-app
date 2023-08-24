@@ -1,8 +1,28 @@
+/* .super-card {
+    width: 85vw;
+    height: 80vh;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+    border-bottom-right-radius: 0em;
+    border-bottom-left-radius: 1.5em;
+    border: solid 1.5px #ffffff;
+} */
+
 .super-card {
-    width: 90vw;
-    height: 90vh;
-    background-color: blueviolet;
-    border-radius: 2em;
-    border: 2px solid white;
-    position: relative;
+  position: relative;
+  width: 82vw;
+  height: 80vh;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  border-bottom-right-radius: 15em;
+  border: solid 1.5px #ffffff;
+  padding: 40px;
+}
+
+.vertical-line {
+  margin-top: 40px;
+  border-left: 1px solid #ffffff;
+  height: 80px;
+  position: absolute;
 }
