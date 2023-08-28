@@ -1,28 +1,83 @@
-/* .super-card {
-    width: 85vw;
-    height: 80vh;
-    border-top-left-radius: 1.5em;
-    border-top-right-radius: 1.5em;
-    border-bottom-right-radius: 0em;
-    border-bottom-left-radius: 1.5em;
-    border: solid 1.5px #ffffff;
-} */
-
 .super-card {
   position: relative;
   width: 82vw;
-  height: 80vh;
-  border-top-left-radius: 1.5em;
-  border-top-right-radius: 1.5em;
-  border-bottom-left-radius: 1.5em;
-  border-bottom-right-radius: 15em;
+  height: 82vh;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 16em;
   border: solid 1.5px #ffffff;
-  padding: 40px;
+  padding: 5vh;
+}
+
+.super-card-container-line {
+  margin-top: 4vh;
+  flex-direction: row;
+  display: inline-flex;
 }
 
 .vertical-line {
-  margin-top: 40px;
-  border-left: 1px solid #ffffff;
-  height: 80px;
-  position: absolute;
+  border-left: 2px solid transparent;
+  height: 9.8vh;
+  animation: appear 1s ease-in-out forwards; /* Utilisation de l'animation "appear" */
+}
+
+@keyframes appear {
+  from {
+    border-color: transparent; /* Commence avec une couleur transparente */
+  }
+  to {
+    border-color: #ffffff; /* Se termine avec la couleur blanche */
+  }
+}
+
+.super-card-subhead {
+  position: relative;
+  width: 25vw;
+  bottom: 5vh;
+  align-self: flex-end;
+  animation: slide-up 1s ease-in-out forwards; /* Ajoutez l'animation de glissement vers le haut */
+  /* background-color: green; */
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.subtitle {
+  text-align: justify;
+  color: #FFB800;
+font-size: 2vw;
+font-style: normal;
+font-weight: 400;
+line-height: 5.2vh;
+text-transform: uppercase;
+}
+
+.super-card-container-title {
+  display: flex;
+  width: 100%;
+  height: 28vh;
+  flex-direction: column;
+  /* background-color: blue; */
+  animation: slide-in 1.8s ease-in-out forwards; /* Ajoutez l'animation de glissement en entrée */
+}
+
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

@@ -29,19 +29,27 @@ body {
 
 h1 {
   color: #fff;
-  font-size: 80px;
+  font-size: 5.6vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 80px; /* 100% */
-  letter-spacing: -0.8px;
+  line-height: 10.5vh; /* 100% */
+  letter-spacing: -0.02vw;
   text-transform: uppercase;
+  text-align: justify;
 }
 
 h3 {
   color: #fff;
-  font-size: 28px;
+  font-size: 1.9vw;
   font-style: normal;
   font-weight: 400;
-  line-height: 40px; /* 142.857% */
+  line-height: 5vh; /* 142.857% */
   text-transform: uppercase;
+  text-align: justify;
+}
+
+button {
+  border: none;
+  background: none;
+  color: #ffffff;
 }
