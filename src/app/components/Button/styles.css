@@ -1,9 +1,84 @@
-.button {
-    display: inline-flex;
-    height: 4vh;
-    width: 4vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.button-container {
+  color: #ffffff;
+  font-size: 1.2vw;
+  font-style: normal;
+  line-height: 1.3vh;
+  text-transform: uppercase;
+  font-weight: 400;
+  height: 8vh;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.button-container:hover {
+  background: linear-gradient(
+        to right,
+        var(--color-secondary) 0.1vw,
+        transparent 0.1vh
+      )
+      0 0,
+    linear-gradient(to right, var(--color-secondary) 0.1vw, transparent 0.1vh) 0
+      100%,
+    linear-gradient(to left, var(--color-secondary) 0.1vw, transparent 0.1vh)
+      100% 0,
+    linear-gradient(to left, var(--color-secondary) 0.1vw, transparent 0.1vh)
+      100% 100%,
+    linear-gradient(to bottom, var(--color-secondary) 0.1vw, transparent 0.1vh)
+      0 0,
+    linear-gradient(to bottom, var(--color-secondary) 0.1vw, transparent 0.1vh)
+      100% 0,
+    linear-gradient(to top, var(--color-secondary) 0.1vw, transparent 0.1vh) 0
+      100%,
+    linear-gradient(to top, var(--color-secondary) 0.1vw, transparent 0.1vh)
+      100% 100%;
+  /* margin-left: 2vw; */
+  color: var(--color-secondary);
+
+  background-repeat: no-repeat;
+  background-size: 1vw 1.5vh;
+  cursor: pointer;
+}
+
+.button-items {
+  color: var(--color-secondary);
+  font-size: 5vw;
+  font-style: normal;
+  line-height: 5vh;
+  text-transform: uppercase;
+  font-weight: 400;
+  gap: 2vh;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+        to right,
+        var(--color-primary) 0.1vw,
+        transparent 0.1vh
+      )
+      0 0,
+    linear-gradient(to right, var(--color-primary) 0.1vw, transparent 0.1vh) 0
+      100%,
+    linear-gradient(to left, var(--color-primary) 0.1vw, transparent 0.1vh)
+      100% 0,
+    linear-gradient(to left, var(--color-primary) 0.1vw, transparent 0.1vh)
+      100% 100%,
+    linear-gradient(to bottom, var(--color-primary) 0.1vw, transparent 0.1vh)
+      0 0,
+    linear-gradient(to bottom, var(--color-primary) 0.1vw, transparent 0.1vh)
+      100% 0,
+    linear-gradient(to top, var(--color-primary) 0.1vw, transparent 0.1vh) 0
+      100%,
+    linear-gradient(to top, var(--color-primary) 0.1vw, transparent 0.1vh)
+      100% 100%;
+  background-repeat: no-repeat;
+  background-size: 1vw 1.5vh;
+}
+
+.button-items:hover {
+  cursor: pointer;
+}

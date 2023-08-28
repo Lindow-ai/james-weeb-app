@@ -53,12 +53,12 @@
 
 .subtitle {
   text-align: justify;
-  color: #FFB800;
-font-size: 2vw;
-font-style: normal;
-font-weight: 400;
-line-height: 5.2vh;
-text-transform: uppercase;
+  color: #ffb800;
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 5.2vh;
+  text-transform: uppercase;
 }
 
 .super-card-container-title {
@@ -70,7 +70,6 @@ text-transform: uppercase;
   animation: slide-in 1.8s ease-in-out forwards; /* Ajoutez l'animation de glissement en entrée */
 }
 
-
 @keyframes slide-in {
   0% {
     transform: translateY(15px);
@@ -80,4 +79,106 @@ text-transform: uppercase;
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.super-card-container-footer {
+  height: 24vh;
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  /* background-color: blue; */
+  justify-content: space-around;
+}
+
+.super-card-container-button-footer {
+  height: 24vh;
+  width: 53.85vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  animation: slide-down 1s ease-in-out forwards; /* Ajoutez l'animation de glissement vers le haut */
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.super-card-container-footer-title {
+  color: var(--color-secondary);
+}
+
+.super-card-container-footer-text {
+  color: #ffb800;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.super-card-container-footer-satellites {
+  height: 30vh;
+  width: 350px;
+  /* background-color: red; */
+  justify-content: space-around;
+  position: relative;
+  bottom: 2vh;
+  left: 1.5vw;
+  animation: slide-down 1s ease-in-out forwards;
+}
+
+.super-card-container-footer-satellites:hover {
+  animation: smart-animate 350ms ease-in-out forwards;
+  cursor: pointer;
+}
+
+@keyframes smart-animate {
+  100% {
+    transform: rotate(12deg);
+  }
+}
+
+.position-container-footer-span {
+  transform: rotate(-10deg);
+}
+
+.position-container-footer-span-click {
+  transform: rotate(17deg);
+}
+
+.text-container-footer-click {
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+  left: 200px;
+  bottom: 25px;
+  animation: slide-down 350ms ease-in-out forwards;
+}
+
+
+.text-container-footer-span {
+  color: var(--color-secondary);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+  left: 75px;
+  bottom: 55px;
+  animation: slide-up 350ms ease-in-out forwards;
 }

@@ -1,28 +1,40 @@
-import React from 'react';
+'use client'
+
+import React, {useState} from "react";
 import Frame from "@/app/assets/Frame";
 import "./styles.css";
-import Button from '../Button/Button';
+import Button from "../Button/Button";
+import Download from "@/app/assets/Download";
+import { VARIANT_BUTTON } from "../Button/variantButton";
+import Satellites from "@/app/assets/Satellites";
 
 const SuperCard = () => {
 
+  const [isSatellitesHover, setIsSatellitesHover] = useState(false)
+
   const spacingValues = [
-    0.80, 0.80, 0.80, 0.80, 0.80, 0.80,  // lignes 1 à 6
-    1,                    // lignes 6 à 7
-    1.20,                    // lignes 7 à 8
-    1.30,                    // lignes 8 à 9
-    1.40,                    // lignes 9 à 10
-    1.60,                    // lignes 10 à 11
-    1.85,                    // lignes 11 à 12
-    1.95,                    // lignes 12 à 13
-    2.05,                    // lignes 13 à 14
-    2.40,                    // lignes 14 à 15
-    2.60,                    // lignes 15 à 16
-    3.30,                    // lignes 16 à 17
-    3.90,                    // lignes 17 à 18
-    4,                       // lignes 18 à 19
-    4.80,                    // lignes 19 à 20
-    5.30,                    // lignes 20 à 21
-    6                    // lignes 21 à 22
+    0.8,
+    0.8,
+    0.8,
+    0.8,
+    0.8,
+    0.8, // lignes 1 à 6
+    1, // lignes 6 à 7
+    1.2, // lignes 7 à 8
+    1.3, // lignes 8 à 9
+    1.4, // lignes 9 à 10
+    1.6, // lignes 10 à 11
+    1.85, // lignes 11 à 12
+    1.95, // lignes 12 à 13
+    2.05, // lignes 13 à 14
+    2.4, // lignes 14 à 15
+    2.6, // lignes 15 à 16
+    3.3, // lignes 16 à 17
+    3.9, // lignes 17 à 18
+    4, // lignes 18 à 19
+    4.8, // lignes 19 à 20
+    5.3, // lignes 20 à 21
+    6, // lignes 21 à 22
   ];
 
   const verticalLines = spacingValues.map((spacing, index) => (
@@ -33,20 +45,60 @@ const SuperCard = () => {
     />
   ));
 
-
   return (
     <div className="super-card">
-      <div className='super-card-container-title'>
+      <div className="super-card-container-title">
         <h3>Our motto is to</h3>
         <h1>Push the boundaries of human knowledge</h1>
-        <div className='super-card-subhead'>
-          <h3 className='subtitle'>to the formation of the first galaxies and the horizons of other worlds</h3>
+        <div className="super-card-subhead">
+          <h3 className="subtitle">
+            to the formation of the first galaxies and the horizons of other
+            worlds
+          </h3>
         </div>
       </div>
-        <div className="super-card-container-line">
-          {verticalLines}
+      <div className="super-card-container-line">{verticalLines}</div>
+      <div className="super-card-container-footer">
+        <div className="super-card-container-button-footer">
+          <Button variant={VARIANT_BUTTON.itemsButton}>
+            <h1 className="super-card-container-footer-title">402</h1>
+            <span className="super-card-container-footer-text">
+              Days in space
+            </span>
+          </Button>
+          <Button
+            style={{ marginLeft: "40px" }}
+            variant={VARIANT_BUTTON.itemsButton}
+          >
+            <h1 className="super-card-container-footer-title">74</h1>
+            <span className="super-card-container-footer-text">
+              Space photos
+            </span>
+          </Button>
+          <Button
+            style={{ marginLeft: "40px" }}
+            variant={VARIANT_BUTTON.itemsButton}
+          >
+            <h1 className="super-card-container-footer-title">98</h1>
+            <span className="super-card-container-footer-text">Articles</span>
+          </Button>
         </div>
-        <Button>Download options</Button>
+        <div>
+        {
+            isSatellitesHover && <div className="position-container-footer-span-click">
+            <span className="text-container-footer-click">CLICK</span>
+          </div>
+        }
+        <div className="super-card-container-footer-satellites" onMouseEnter={() => setIsSatellitesHover(true)} onMouseLeave={() => setIsSatellitesHover(false)}>
+            <Satellites />
+        </div>
+          {
+            isSatellitesHover && <div className="position-container-footer-span">
+            <span className="text-container-footer-span">Get a quick fact!</span>
+          </div>
+          }
+        </div>
+      </div>
     </div>
   );
 };

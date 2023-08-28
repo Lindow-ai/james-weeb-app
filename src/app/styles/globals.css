@@ -52,4 +52,30 @@ button {
   border: none;
   background: none;
   color: #ffffff;
+  text-align: center;
+  font-size: 1.2vw;
+  font-style: normal;
+  line-height: 1.3vh;
+  text-transform: uppercase;
+  font-weight: 400;
+  height: 8vh;
+  width: 17vw;
+}
+
+button:hover {
+  background:
+  linear-gradient(to right, var(--color-secondary) 0.10vw, transparent 0.10vh) 0 0,
+  linear-gradient(to right,  var(--color-secondary) 0.10vw, transparent 0.10vh) 0 100%,
+  linear-gradient(to left,  var(--color-secondary) 0.10vw, transparent 0.10vh) 100% 0,
+  linear-gradient(to left,  var(--color-secondary) 0.10vw, transparent 0.10vh) 100% 100%,
+  linear-gradient(to bottom,  var(--color-secondary) 0.10vw, transparent 0.10vh) 0 0,
+  linear-gradient(to bottom,  var(--color-secondary) 0.10vw, transparent 0.10vh) 100% 0,
+  linear-gradient(to top,  var(--color-secondary) 0.10vw, transparent 0.10vh) 0 100%,
+  linear-gradient(to top,  var(--color-secondary) 0.10vw, transparent 0.10vh) 100% 100%;
+  /* margin-left: 2vw; */
+  color: var(--color-secondary);
+  
+background-repeat: no-repeat;
+background-size: 1vw 1.5vh;  
+cursor: pointer;
 }
