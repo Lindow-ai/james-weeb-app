@@ -4,10 +4,10 @@ function Satellites() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="343"
-      height="278"
+      width="24vw"
+      height="28.5vh"
       fill="none"
-      viewBox="-15 50 343 278"
+      viewBox="0 0 343 278"
     >
       <path
         fill="#fff"

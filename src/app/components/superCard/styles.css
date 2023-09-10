@@ -19,7 +19,7 @@
 .vertical-line {
   border-left: 2px solid transparent;
   height: 9.8vh;
-  animation: appear 1s ease-in-out forwards; /* Utilisation de l'animation "appear" */
+  animation: appear 3s ease-in-out forwards; /* Utilisation de l'animation "appear" */
 }
 
 @keyframes appear {
@@ -88,7 +88,7 @@
   flex-direction: row;
   flex: 1;
   /* background-color: blue; */
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .super-card-container-button-footer {
@@ -119,24 +119,37 @@
 .super-card-container-footer-text {
   color: #ffb800;
   text-align: center;
-  font-size: 18px;
+  font-size: 0.9vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
 .super-card-container-footer-satellites {
-  height: 30vh;
-  width: 350px;
-  /* background-color: red; */
-  justify-content: space-around;
-  position: relative;
-  bottom: 2vh;
-  left: 1.5vw;
   animation: slide-down 1s ease-in-out forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 26vh;
+}
+
+.super-card-container-footer-satellites-open {
+  animation: smart-animate-open 1s ease-in-out forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 43vh;
+  position: relative;
+  bottom: 9vh;
+  /* background-color: blue; */
 }
 
 .super-card-container-footer-satellites:hover {
+  height: 35vh;
+  position: relative;
+  bottom: 4vh;
   animation: smart-animate 350ms ease-in-out forwards;
   cursor: pointer;
 }
@@ -147,38 +160,130 @@
   }
 }
 
+@keyframes smart-animate-open {
+  100% {
+    transform: rotate(50deg);
+  }
+}
+
 .position-container-footer-span {
-  transform: rotate(-10deg);
+  align-self: center;
+  transform: rotate(-23deg);
+}
+
+
+.position-container-footer-span-open {
+  align-self: center;
+  transform: rotate(-49.5deg);
+}
+
+.position-container-footer-span-hover {
+  align-self: center;
+  transform: rotate(13.369deg);
+}
+
+.position-container-footer-span-second-hover {
+  align-self: center;
+  transform: rotate(27.239deg);
 }
 
 .position-container-footer-span-click {
-  transform: rotate(17deg);
+  display: inline-flex;
+  align-items: flex-start;
+  align-self: flex-start;
+  position: relative;
+  top: 80%;
+  right: 15%;
+  transform: rotate(-60deg);
 }
 
-.text-container-footer-click {
+.position-container-footer-span-second-click {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  position: relative;
+  top: 25%;
+  right: 5%;
+  transform: rotate(-28deg);
+}
+
+.text-container-footer-hover {
   text-align: center;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
+  font-size: 0.9vw;
+  font-style: novrmal;
+  font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
   position: relative;
-  left: 200px;
-  bottom: 25px;
+  top: 7.5vh;
+  left: 0.5vw;
   animation: slide-down 350ms ease-in-out forwards;
+}
+
+.text-container-footer-second-hover {
+  text-align: center;
+  font-size: 0.9vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  position: relative;
+  top: 1.8vh;
+  left: 2.6vw;
+  animation: slide-down 350ms ease-in-out forwards;
+}
+
+.text-container-footer-click {
+  width: 9vw;
+  color: #ffb800;
+  text-align: center;
+  font-size: 0.9vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8vh;
+  text-decoration-line: underline;
+  animation: slide-down 350ms ease-in-out forwards;
+  cursor: pointer;
+}
+
+.text-container-footer-second-click {
+  width: 9vw;
+  color: #ffb800;
+  text-align: center;
+  font-size: 0.9vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8vh;
+  text-decoration-line: underline;
+  animation: slide-down 350ms ease-in-out forwards;
+}
+
+.text-container-footer-second-click:hover {
+  cursor: pointer !important;
 }
 
 
 .text-container-footer-span {
   color: var(--color-secondary);
   text-align: center;
-  font-size: 18px;
+  font-size: 0.9vw;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
   position: relative;
-  left: 75px;
-  bottom: 55px;
+  bottom: 4vh;
   animation: slide-up 350ms ease-in-out forwards;
 }
+
+.text-container-footer-span-open {
+  color: var(--color-secondary);
+  text-align: center;
+  font-size: 1.9vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  animation: slide-up 350ms ease-in-out forwards;
+}
+

@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Frame from "@/app/assets/Frame";
 import "./styles.css";
 import Button from "../Button/Button";
@@ -11,6 +11,7 @@ import Satellites from "@/app/assets/Satellites";
 const SuperCard = () => {
 
   const [isSatellitesHover, setIsSatellitesHover] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
 
   const spacingValues = [
     0.8,
@@ -45,6 +46,8 @@ const SuperCard = () => {
     />
   ));
 
+  console.log('openModal', openModal)
+
   return (
     <div className="super-card">
       <div className="super-card-container-title">
@@ -67,7 +70,7 @@ const SuperCard = () => {
             </span>
           </Button>
           <Button
-            style={{ marginLeft: "40px" }}
+            style={{ marginLeft: "4vw" }}
             variant={VARIANT_BUTTON.itemsButton}
           >
             <h1 className="super-card-container-footer-title">74</h1>
@@ -76,26 +79,36 @@ const SuperCard = () => {
             </span>
           </Button>
           <Button
-            style={{ marginLeft: "40px" }}
+            style={{ marginLeft: "4vw" }}
             variant={VARIANT_BUTTON.itemsButton}
           >
             <h1 className="super-card-container-footer-title">98</h1>
             <span className="super-card-container-footer-text">Articles</span>
           </Button>
         </div>
-        <div>
-        {
-            isSatellitesHover && <div className="position-container-footer-span-click">
-            <span className="text-container-footer-click">CLICK</span>
+        <div
+          className={!openModal ? "super-card-container-footer-satellites" : "super-card-container-footer-satellites-open"}
+          onMouseEnter={() => setIsSatellitesHover(true)}
+          onMouseLeave={() => { setIsSatellitesHover(false), setOpenModal(false) }}
+        >
+          {isSatellitesHover && <div className={!openModal ? "position-container-footer-span-hover" : "position-container-footer-span-click"}>
+            <span className={!openModal ? "text-container-footer-hover" : "text-container-footer-click"}>{!openModal ? "CLICK" : "Generate a new quick fact!"}</span>
           </div>
-        }
-        <div className="super-card-container-footer-satellites" onMouseEnter={() => setIsSatellitesHover(true)} onMouseLeave={() => setIsSatellitesHover(false)}>
-            <Satellites />
-        </div>
+          }
           {
-            isSatellitesHover && <div className="position-container-footer-span">
-            <span className="text-container-footer-span">Get a quick fact!</span>
+            isSatellitesHover && <div className={!openModal ? "position-container-footer-span-second-hover" : "position-container-footer-span-second-click"}>
+              {
+                !openModal ? <span className="text-container-footer-second-hover">CLICK</span> : <span onClick={() => setOpenModal(false)} className="text-container-footer-second-click">Close quick facts</span>
+              }
+            </div>
+          }
+          <div onClick={() => setOpenModal(true)}>
+            <Satellites />
           </div>
+          {
+            isSatellitesHover && <div className={!openModal ? "position-container-footer-span" : "position-container-footer-span-open"}>
+              <span onClick={() => setOpenModal(!openModal)} className={!openModal ? "text-container-footer-span" : "text-container-footer-span-open"}>{!openModal ? "Get a quick fact!" : "<- QUICK FACT!"}</span>
+            </div>
           }
         </div>
       </div>

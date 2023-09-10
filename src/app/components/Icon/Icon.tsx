@@ -18,7 +18,7 @@ const Icon: React.FC<IconProps> = ({
   handleMouseLeave,
 }) => {
   if (url) {
-    return <Image src={url} alt="Icon" />;
+    return <Image src={url} width={154} height={154} alt="Icon" />;
   } else if (children) {
     return (
       <div className="icon-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
